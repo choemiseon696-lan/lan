@@ -3,82 +3,573 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>대출 상담</title>
+<title> 드림인터내셔널대부중개</title>
+<link rel="icon" type="image/png" href="favicon.png">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P7V1WP89MC"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-P7V1WP89MC');
+gtag('config', 'AW-18126831450');
+</script>
+
 
 <style>
-body { font-family: sans-serif; background:#f5f5f5; padding:20px; }
-
-.box {
-  background:#fff;
-  padding:15px;
-  border-radius:12px;
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Apple SD Gothic Neo',sans-serif;
+  background:#f3f6fb;
+  padding-top:45px;
 }
 
-.title {
+.wrap{
+  max-width:480px;
+  margin:auto;
+}
+
+
+.top-fixed{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  max-width:480px;
+  right:0;
+  margin:auto;
+  height:45px;
+  background:#111;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 10px;
+  font-size:11px;
+  z-index:9999;
+}
+
+.top-text{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.top-icons{
+  display:flex;
+  gap:8px;
+}
+
+.icon{
+  width:30px;
+  height:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.call{background:#4a90ff;color:#fff;}
+.kakao{background:#ffe812;color:#000;}
+
+
+.kakao-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:55px;
+  height:55px;
+  background:#ffe812;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  text-decoration:none;
+  color:#000;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  z-index:9999;
+}
+
+
+.top-banner{
+  width:100%;
+  display:block;
+  border-bottom-left-radius:30px;
+  border-bottom-right-radius:30px;
+}
+
+
+.mid-banner{
+  width:100%;
+  display:block;
+  margin-top:15px;
+  border-radius:20px;
+}
+
+
+.loan-slider{
+  position:relative;
+  width:100%;
+  height:180px;
+  overflow:hidden;
+  margin-top:15px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#2d8cff,#6a5af9);
+}
+
+.slides{
+  display:flex;
+  height:100%;
+}
+
+.slide{
+  min-width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  text-align:center;
+}
+
+.slide .sub{
+  font-size:13px;
+  opacity:0.8;
+  margin-bottom:8px;
+}
+
+.slide h2{
+  font-size:18px;
+  font-weight:bold;
+}
+
+.dots{
+  position:absolute;
+  bottom:10px;
+  width:100%;
+  text-align:center;
+}
+
+.dot{
+  display:inline-block;
+  width:6px;
+  height:6px;
+  margin:0 4px;
+  background:rgba(255,255,255,0.5);
+  border-radius:50%;
+}
+
+.dot.active{
+  background:#fff;
+}
+
+
+.form-box{
+  background:#fff;
+  margin:15px 15px 20px;
+  padding:25px 20px 20px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.form-box h3{
+  margin-bottom:15px;
+  font-size:18px;
+}
+
+.input{
+  width:100%;
+  padding:14px;
+  margin-bottom:12px;
+  border:1px solid #ddd;
+  border-radius:10px;
+}
+
+.submit-btn{
+  width:100%;
+  padding:16px;
+  background:linear-gradient(135deg,#2d8cff,#1b5ed7);
+  color:#fff;
+  border:none;
+  border-radius:12px;
+  font-weight:bold;
+}
+
+
+.live{
+  background:#fff;
+  margin:20px 15px;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.live-title{
   font-weight:bold;
   margin-bottom:10px;
 }
 
-.item {
-  background:#fafafa;
-  padding:10px;
-  border-radius:8px;
-  margin-bottom:8px;
+.live-item{
   display:flex;
   justify-content:space-between;
+  align-items:center;
+  padding:14px 0;
+  border-bottom:1px solid #eee;
+  font-size:13px;
 }
 
-.btn {
-  padding:5px 10px;
-  border-radius:6px;
-  color:#fff;
+.live-item:last-child{
+  border-bottom:none;
+}
+
+.live-left{
+  display:flex;
+  gap:8px;
+}
+
+.live-name{
+  font-weight:bold;
+}
+
+.live-amount{
+  color:#333;
+}
+
+.badge{
+  padding:4px 8px;
+  border-radius:8px;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.wait{background:#e3f2fd;color:#1976d2;}
+.done{background:#e8f5e9;color:#2e7d32;}
+.ok{background:#fff3e0;color:#ef6c00;}
+
+
+.footer{
+  background:#333;
+  color:#ccc;
+  text-align:center;
+  padding:30px 15px 80px;
   font-size:12px;
+  line-height:1.6;
 }
 
-.wait { background:#f0ad4e; }
-.done { background:#5bc0de; }
-.ok { background:#5cb85c; }
+.footer-top{
+  margin-bottom:25px;
+}
+
+.footer-warning{
+  margin-bottom:25px;
+}
+
+.footer-info{
+  margin-bottom:25px;
+}
 </style>
 </head>
 
 <body>
 
-<div class="box">
-  <div class="title">최근 신청 현황</div>
+<div class="top-fixed">
+  <div class="top-text">
+    상호 : 드림인터내셔널대부 | 대표 : 한공주 | 대부업 등록번호 : 2007-경기부천-대부중개65호
+  </div>
+  <div class="top-icons">
+    
+  </div>
+</div>
+
+<div class="wrap">
+
+<img src="https://choemiseon696-lan.github.io/loan-site/top-banner.png" class="top-banner">
+<img src="https://choemiseon696-lan.github.io/loan-site/mid-banner.png" class="mid-banner">
+
+<div class="loan-slider">
+  <div class="slides" id="slides">
+<div class="slide">
+  <div class="sub">금융상품 비교 서비스</div>
+  <h2>여러 금융사의 상품을 한눈에 비교하세요</h2>
+</div>
+<div class="slide">
+  <div class="sub">조건별 상품 안내</div>
+  <h2>정보 입력 후 상담이 진행됩니다</h2>
+</div>
+<div class="slide">
+  <div class="sub">비대면 상담 가능</div>
+  <h2>편한 시간에 상담을 받아보세요</h2>
+</div>
+  </div>
+
+  <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div> <!-- 슬라이드 -->
+
+<img src="https://choemiseon696-lan.github.io/loan-site/new-banner.png" class="mid-banner">
+
+<div class="form-box">
+  <h3>간편 상담 신청</h3>
+
+  <p style="font-size:12px; color:#666; margin-bottom:10px;">
+  본 서비스는 금융상품을 직접 제공하지 않으며,
+  고객 정보에 따라 제휴 금융사의 상품을 안내하는 중개 서비스입니다.
+  </p>
+
+  <!-- 성별 -->
+  <select class="input" id="gender">
+    <option value="">성별 선택</option>
+    <option value="남">남</option>
+    <option value="여">여</option>
+  </select>
+
+  <input class="input" id="name" placeholder="이름">
+  <input class="input" id="birth" placeholder="생년월일 (예: 900101)">
+  <input class="input" id="phone" placeholder="전화번호">
+
+  <!-- 연락 가능 시간 -->
+  <select class="input" id="time">
+    <option value="">연락 가능 시간</option>
+    <option>09:00 ~ 10:00</option>
+    <option>10:00 ~ 11:00</option>
+    <option>11:00 ~ 12:00</option>
+    <option>12:00 ~ 13:00</option>
+    <option>13:00 ~ 14:00</option>
+    <option>14:00 ~ 15:00</option>
+    <option>15:00 ~ 16:00</option>
+    <option>16:00 ~ 17:00</option>
+    <option>17:00 ~ 18:00</option>
+  </select>
+
+  <!-- 금융 연체 -->
+  <select class="input" id="loanDelay">
+    <option value="">금융권 연체 여부</option>
+    <option value="유">유</option>
+    <option value="무">무</option>
+  </select>
+
+  <!-- 통신 연체 -->
+  <select class="input" id="telDelay">
+    <option value="">통신 연체 여부</option>
+    <option value="유">유</option>
+    <option value="무">무</option>
+  </select>
+
+  <select class="input" id="amount">
+    <option>필요금액 선택</option>
+    <option>500만원 이하</option>
+    <option>500 ~ 1000만원</option>
+    <option>1000 ~ 3000만원</option>
+    <option>3000만원 이상</option>
+  </select>
+
+ 
+  <div style="margin-top:12px; text-align:left; font-size:14px; display:flex; align-items:center; gap:6px;">
+    <input type="checkbox" id="agree" required style="width:16px; height:16px;">
+    <label for="agree">개인정보 수집 및 이용에 동의합니다.</label>
+  </div>
+
+  
+  <p style="font-size:11px; color:#aaa; margin-top:4px;">
+  ※ 입력 정보는 상품 안내를 위한 참고용이며, 신용조회는 진행되지 않습니다.
+  </p>
+
+  
+  <button class="submit-btn" onclick="sendTelegram()">상품 조건 확인하기</button>
+
+  
+  <a href="https://open.kakao.com/o/sxp5nKsi" target="_blank"
+     style="display:block; text-align:center; margin-top:12px; font-size:14px; color:#2d8cff; font-weight:bold; text-decoration:none;">
+    카카오톡으로 상담 문의하기
+  </a>
+
+</div>
+<div class="live">
+  <div class="live-title">최근 상담 접수 현황</div>
   <div id="list"></div>
 </div>
 
+</div>
+
+<div class="footer">
+  <div class="footer-top">
+    상호 : 드림인터내셔널대부중개 | 대표 : 김진수 | 대부업 등록번호 : 2007-경기부천-대부중개65호<br>
+    주소 : 경기도 부천시 원미구 중동 1158-8 성도빌딩<br>
+    사업자 등록번호 : 130-37-27529 영업시간 09:00 ~ 18:00 | 등록기관 : 지방자치단체<br>
+    
+  </div>
+
+  <div class="footer-warning">
+    본 서비스는 금융상품을 직접 제공하지 않으며,<br>
+    고객의 조건에 따라 제휴 금융사의 상품을 안내하는 중개 서비스입니다.<br>
+    ※ 본 서비스는 대출 실행 및 승인 여부를 보장하지 않습니다.<br>
+    
+    대출금리 : 연20%이내 / 연체이자율 : 약정금리+3% (단, 법정 최고금리 20% 이내)<br>
+    취급수수료 등 기타부대비용 없음 / 조기상환조건없음 / 중개수수료 요구하거나 받는 것은 불법입니다.<br>
+    대출시 귀하의 신용등급이 하락할 수 있습니다.<br>
+    과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다.
+  </div>
+
+  <div class="footer-info">
+    12개월 ~ 60개월 / 총 대출 비용 예시 : 100만원을 12개월 기간 동안 최대 금리 연 20% 적용하여<br>
+    원리금 균등상환방식으로 이용하는 경우 총 상환 금액 1,111,614원<br>
+    (단, 대출상품 및 상환방법 등 대출계약 내용에 따라 달라질 수 있습니다.)
+  </div>
+
+<div class="footer-copy">
+  Copyright © 드림인터내셔널대부중개 All Rights Reserved.
+</div>
+
+
+<div style="margin-top:15px;">
+  <a href="/privacy.html" target="_blank" style="color:#ccc;">개인정보처리방침</a>
+  <span style="margin:0 8px;">|</span>
+  <a href="/terms.html" target="_blank" style="color:#ccc;">이용약관</a>
+</div>
+
+</div>
+
 <script>
-const names = ["김**","이**","박**","최**","정**"];
-const amounts = ["100만원","150만원","200만원","300만원"];
-const status = [
-  {text:"상담대기", class:"wait"},
-  {text:"신청완료", class:"done"},
-  {text:"승인완료", class:"ok"}
+// 슬라이드
+let current=0;
+const slides=document.getElementById("slides");
+const dots=document.querySelectorAll(".dot");
+
+setInterval(()=>{
+  current=(current+1)%3;
+  slides.style.transform=`translateX(-${current*100}%)`;
+  dots.forEach(d=>d.classList.remove("active"));
+  dots[current].classList.add("active");
+},3000);
+
+
+const names=[
+"김**","이**","박**","최**","정**","강**","조**","윤**","장**","임**",
+"한**","오**","서**","신**","권**","황**","안**","송**","류**","전**",
+"홍**","고**","문**","양**","손**","배**","백**","허**","유**","남**",
+"심**","노**","하**","곽**","성**","차**","주**","우**","구**","민**",
+"진**","엄**","채**","원**","천**","방**","공**","현**","함**","변**"
 ];
 
-function addItem() {
-  const name = names[Math.floor(Math.random()*names.length)];
-  const amount = amounts[Math.floor(Math.random()*amounts.length)];
-  const stat = status[Math.floor(Math.random()*status.length)];
+const amounts=[
+"100만원","200만원","300만원","500만원","700만원",
+"1000만원","1500만원","2000만원","3000만원","5000만원"
+];
 
-  const div = document.createElement("div");
-  div.className = "item";
-  div.innerHTML = `
-    <div>${name} / ${amount}</div>
-    <div class="btn ${stat.class}">${stat.text}</div>
+const status=[
+{text:"상담중",class:"wait"},
+{text:"신청완료",class:"ok"},
+{text:"상담완료",class:"done"}
+];
+
+function addItem(){
+  const name=names[Math.floor(Math.random()*names.length)];
+  const amount=amounts[Math.floor(Math.random()*amounts.length)];
+  const stat=status[Math.floor(Math.random()*status.length)];
+
+  const div=document.createElement("div");
+  div.className="live-item";
+  div.innerHTML=`
+    <div class="live-left">
+      <div class="live-name">${name} 고객님</div>
+      <div class="live-amount">${amount}</div>
+    </div>
+    <div>
+      <span class="badge ${stat.class}">${stat.text}</span>
+    </div>
   `;
 
-  const list = document.getElementById("list");
+  const list=document.getElementById("list");
   list.prepend(div);
 
-  if(list.children.length > 6){
+  if(list.children.length>5){
     list.removeChild(list.lastChild);
   }
 }
 
 for(let i=0;i<3;i++) addItem();
-setInterval(addItem, 3000);
+setInterval(addItem,10000);
+
+function sendTelegram(){
+
+const gender = document.getElementById("gender").value;
+const name = document.getElementById("name").value;
+const birth = document.getElementById("birth").value;
+const phone = document.getElementById("phone").value;
+const time = document.getElementById("time").value;
+const loanDelay = document.getElementById("loanDelay").value;
+const telDelay = document.getElementById("telDelay").value;
+const amount = document.getElementById("amount").value;
+const agree = document.getElementById("agree").checked;
+
+if(!agree){
+  alert("개인정보 수집 및 이용에 동의해주세요.");
+  return;
+}
+
+if(!name || !phone){
+  alert("이름과 전화번호는 필수입니다.");
+  return;
+}
+
+if(!/^\d{6}$/.test(birth)){
+  alert("생년월일은 숫자 6자리로 입력해주세요.");
+  return;
+}
+
+if(!gender || !time || !loanDelay || !telDelay || amount === "필요금액 선택"){
+  alert("모든 항목을 선택해주세요.");
+  return;
+}
+
+
+const SECRET = "amon_2026_secure";
+
+const url =
+  "https://script.google.com/macros/s/AKfycbwGYTuQfH6mgRr6bUaRinw3B5fvJHXWmtVUSm9PgvrNTYFBJ6_sXzcj9ldDOJ13-awCQw/exec"
+  + "?secret=" + SECRET
+  + "&referer=" + encodeURIComponent(location.href)
+  + "&gender=" + encodeURIComponent(gender)
+  + "&name=" + encodeURIComponent(name)
+  + "&birth=" + encodeURIComponent(birth)
+  + "&phone=" + encodeURIComponent(phone)
+  + "&time=" + encodeURIComponent(time)
+  + "&loanDelay=" + encodeURIComponent(loanDelay)
+  + "&telDelay=" + encodeURIComponent(telDelay)
+  + "&amount=" + encodeURIComponent(amount);
+
+fetch(url, {
+  method: "GET",
+  mode: "no-cors"
+})
+.catch(()=>{});
+
+
+  
+
+alert("접수완료. 상담사 배정후 연락드리겠습니다.");
+}
+
+document.getElementById("phone").addEventListener("input", function(){
+  let value = this.value.replace(/[^0-9]/g, '');
+
+  if(value.length < 4){
+    this.value = value;
+  }else if(value.length < 8){
+    this.value = value.replace(/(\d{3})(\d+)/, "$1-$2");
+  }else{
+    this.value = value.replace(/(\d{3})(\d{4})(\d+)/, "$1-$2-$3");
+  }
+});
 </script>
 
 </body>
