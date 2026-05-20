@@ -4,8 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title> 드림인터내셔널대부중개</title>
-<link rel="icon" type="image/png" href="favicon.png">
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18126831450"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'AW-18126831450');
+</script>
+
+<link rel="icon" type="image/png" href="favicon.png">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -537,8 +547,9 @@ fetch(url, {
 })
 .catch(()=>{});
 
-
-  
+gtag('event', 'conversion', {
+  'send_to': 'AW-18126831450/전환ID'
+});
 
 alert("접수완료. 상담사 배정후 연락드리겠습니다.");
 }
