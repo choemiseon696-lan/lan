@@ -567,7 +567,12 @@ fetch(url, {
 .then(()=>{
   submitCounts[cleanPhone] = currentCount + 1;
   localStorage.setItem("submitCounts", JSON.stringify(submitCounts));
+
   alert("접수완료. 상담사 배정후 연락드리겠습니다.");
+
+  isSubmitting = false;
+  submitBtn.disabled = false;
+  submitBtn.innerText = "상품 조건 확인하기";
 })
 .catch(()=>{
   alert("접수 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
