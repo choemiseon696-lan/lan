@@ -3,15 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> 드림인터내셔널대부중개</title>
+<title>드림인터내셔널대부중개</title>
 
-<!-- Google tag (gtag.js) -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18126831450"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
 gtag('config', 'AW-18126831450');
 </script>
 
@@ -19,33 +18,48 @@ gtag('config', 'AW-18126831450');
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+  --blue:#3182f6;
+  --blue-dark:#1b64da;
+  --text:#191f28;
+  --sub:#6b7684;
+  --line:#edf0f3;
+  --bg:#f7f9fb;
+  --card:#ffffff;
+}
+
 body{
-  font-family:'Apple SD Gothic Neo',sans-serif;
-  background:#f3f6fb;
-  padding-top:45px;
+  font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Pretendard','Noto Sans KR',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  padding-top:48px;
 }
 
 .wrap{
   max-width:480px;
-  margin:auto;
+  margin:0 auto;
+  background:#f7f9fb;
+  min-height:100vh;
 }
-
 
 .top-fixed{
   position:fixed;
   top:0;
   left:0;
+  right:0;
   width:100%;
   max-width:480px;
-  right:0;
   margin:auto;
-  height:45px;
-  background:#111;
-  color:#fff;
+  height:48px;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(0,0,0,0.04);
+  color:#4e5968;
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  padding:0 10px;
+  justify-content:center;
+  padding:0 14px;
   font-size:11px;
   z-index:9999;
 }
@@ -56,74 +70,198 @@ body{
   text-overflow:ellipsis;
 }
 
-.top-icons{
-  display:flex;
-  gap:8px;
+.hero{
+  position:relative;
+  margin:0 0 18px;
+  padding:34px 22px 28px;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(49,130,246,0.22), transparent 32%),
+    linear-gradient(180deg,#ffffff 0%,#edf6ff 100%);
+  overflow:hidden;
 }
 
-.icon{
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:8px 11px;
+  border-radius:999px;
+  background:#eef6ff;
+  color:#1b64da;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:16px;
+}
+
+.hero h1{
+  font-size:30px;
+  line-height:1.24;
+  letter-spacing:-1.2px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+.hero p{
+  font-size:15px;
+  line-height:1.55;
+  color:var(--sub);
+  margin-bottom:22px;
+}
+
+.hero-card{
+  background:#fff;
+  border-radius:26px;
+  padding:18px;
+  box-shadow:0 18px 45px rgba(49,130,246,0.16);
+}
+
+.hero-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.hero-row:last-child{border-bottom:none;}
+
+.hero-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.hero-icon{
+  width:36px;
+  height:36px;
+  border-radius:14px;
+  background:#f2f7ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+}
+
+.hero-label{
+  font-size:13px;
+  color:#8b95a1;
+  margin-bottom:3px;
+}
+
+.hero-value{
+  font-size:15px;
+  font-weight:800;
+}
+
+.hero-status{
+  font-size:12px;
+  font-weight:800;
+  color:var(--blue);
+}
+
+.quick-box{
+  margin:0 15px 16px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.quick-item{
+  background:#fff;
+  border-radius:20px;
+  padding:16px 14px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.04);
+}
+
+.quick-icon{
+  width:34px;
+  height:34px;
+  border-radius:14px;
+  background:#f2f4f6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:10px;
+  font-size:18px;
+}
+
+.quick-title{
+  font-size:14px;
+  font-weight:800;
+  margin-bottom:4px;
+}
+
+.quick-sub{
+  font-size:12px;
+  color:var(--sub);
+  line-height:1.45;
+}
+
+.process{
+  background:#fff;
+  margin:0 15px 16px;
+  padding:22px 18px;
+  border-radius:24px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.04);
+}
+
+.section-title{
+  font-size:19px;
+  font-weight:900;
+  letter-spacing:-0.4px;
+  margin-bottom:14px;
+}
+
+.step{
+  display:flex;
+  gap:12px;
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.step:last-child{border-bottom:none;}
+
+.step-num{
   width:30px;
   height:30px;
+  flex:0 0 30px;
+  border-radius:50%;
+  background:#eef6ff;
+  color:var(--blue);
   display:flex;
   align-items:center;
   justify-content:center;
-  border-radius:50%;
-  text-decoration:none;
-  font-size:14px;
+  font-size:12px;
+  font-weight:900;
 }
 
-.call{background:#4a90ff;color:#fff;}
-.kakao{background:#ffe812;color:#000;}
-
-
-.kakao-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  width:55px;
-  height:55px;
-  background:#ffe812;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:22px;
-  text-decoration:none;
-  color:#000;
-  box-shadow:0 5px 15px rgba(0,0,0,0.2);
-  z-index:9999;
+.step-title{
+  font-size:15px;
+  font-weight:800;
+  margin-bottom:4px;
 }
 
-
-.top-banner{
-  width:100%;
-  display:block;
-  border-bottom-left-radius:30px;
-  border-bottom-right-radius:30px;
+.step-sub{
+  font-size:12px;
+  color:var(--sub);
+  line-height:1.45;
 }
-
-
-.mid-banner{
-  width:100%;
-  display:block;
-  margin-top:15px;
-  border-radius:20px;
-}
-
 
 .loan-slider{
   position:relative;
-  width:100%;
-  height:180px;
+  width:calc(100% - 30px);
+  height:170px;
   overflow:hidden;
-  margin-top:15px;
-  border-radius:20px;
-  background:linear-gradient(135deg,#2d8cff,#6a5af9);
+  margin:0 15px 16px;
+  border-radius:26px;
+  background:linear-gradient(135deg,#191f28,#3182f6);
+  box-shadow:0 14px 35px rgba(49,130,246,0.22);
 }
 
 .slides{
   display:flex;
   height:100%;
+  transition:transform .45s ease;
 }
 
 .slide{
@@ -131,86 +269,191 @@ body{
   display:flex;
   flex-direction:column;
   justify-content:center;
-  align-items:center;
+  align-items:flex-start;
   color:#fff;
-  text-align:center;
+  text-align:left;
+  padding:26px;
 }
 
 .slide .sub{
   font-size:13px;
-  opacity:0.8;
-  margin-bottom:8px;
+  opacity:0.75;
+  margin-bottom:10px;
+  font-weight:600;
 }
 
 .slide h2{
-  font-size:18px;
-  font-weight:bold;
+  font-size:22px;
+  line-height:1.35;
+  font-weight:900;
+  letter-spacing:-0.7px;
 }
 
 .dots{
   position:absolute;
-  bottom:10px;
-  width:100%;
-  text-align:center;
+  bottom:14px;
+  left:25px;
 }
 
 .dot{
   display:inline-block;
   width:6px;
   height:6px;
-  margin:0 4px;
-  background:rgba(255,255,255,0.5);
+  margin-right:5px;
+  background:rgba(255,255,255,0.45);
   border-radius:50%;
 }
 
 .dot.active{
+  width:18px;
+  border-radius:999px;
   background:#fff;
 }
-
 
 .form-box{
   background:#fff;
-  margin:15px 15px 20px;
-  padding:25px 20px 20px;
-  border-radius:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  margin:0 15px 18px;
+  padding:24px 18px 20px;
+  border-radius:28px;
+  box-shadow:0 12px 34px rgba(0,0,0,0.07);
+}
+
+.form-head{
+  margin-bottom:16px;
 }
 
 .form-box h3{
-  margin-bottom:15px;
-  font-size:18px;
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:-0.7px;
+  margin-bottom:8px;
+}
+
+.form-desc{
+  font-size:13px;
+  color:var(--sub);
+  line-height:1.55;
 }
 
 .input{
   width:100%;
+  height:52px;
+  padding:0 15px;
+  margin-bottom:10px;
+  border:1px solid #e5e8eb;
+  border-radius:16px;
+  background:#f9fafb;
+  font-size:15px;
+  color:var(--text);
+  outline:none;
+}
+
+.input:focus{
+  border-color:var(--blue);
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(49,130,246,0.12);
+}
+
+.agree-box{
+  margin-top:10px;
   padding:14px;
-  margin-bottom:12px;
-  border:1px solid #ddd;
-  border-radius:10px;
+  background:#f9fafb;
+  border-radius:16px;
+  font-size:13px;
+  color:#4e5968;
+}
+
+.agree-line{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:700;
+}
+
+.agree-line input{
+  width:17px;
+  height:17px;
+}
+
+.notice{
+  font-size:11px;
+  color:#8b95a1;
+  line-height:1.45;
+  margin-top:7px;
 }
 
 .submit-btn{
   width:100%;
-  padding:16px;
-  background:linear-gradient(135deg,#2d8cff,#1b5ed7);
+  height:56px;
+  margin-top:16px;
+  background:var(--blue);
   color:#fff;
   border:none;
-  border-radius:12px;
-  font-weight:bold;
+  border-radius:18px;
+  font-size:17px;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 12px 24px rgba(49,130,246,0.28);
 }
 
+.submit-btn:disabled{
+  background:#b0b8c1;
+  box-shadow:none;
+}
+
+.trust{
+  margin:0 15px 16px;
+  background:#fff;
+  border-radius:24px;
+  padding:20px 18px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.04);
+}
+
+.trust-list{
+  display:grid;
+  gap:10px;
+}
+
+.trust-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:14px;
+  color:#333d4b;
+  font-weight:700;
+}
+
+.check{
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  background:#eef6ff;
+  color:var(--blue);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  font-weight:900;
+}
 
 .live{
   background:#fff;
-  margin:20px 15px;
-  padding:20px;
-  border-radius:15px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  margin:0 15px 20px;
+  padding:22px 18px;
+  border-radius:24px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.04);
 }
 
 .live-title{
-  font-weight:bold;
-  margin-bottom:10px;
+  font-size:19px;
+  font-weight:900;
+  margin-bottom:4px;
+}
+
+.live-sub{
+  font-size:12px;
+  color:var(--sub);
+  margin-bottom:12px;
 }
 
 .live-item{
@@ -218,7 +461,7 @@ body{
   justify-content:space-between;
   align-items:center;
   padding:14px 0;
-  border-bottom:1px solid #eee;
+  border-bottom:1px solid var(--line);
   font-size:13px;
 }
 
@@ -229,47 +472,86 @@ body{
 .live-left{
   display:flex;
   gap:8px;
+  align-items:center;
 }
 
 .live-name{
-  font-weight:bold;
+  font-weight:900;
 }
 
 .live-amount{
-  color:#333;
+  color:#4e5968;
+  font-weight:700;
 }
 
 .badge{
-  padding:4px 8px;
-  border-radius:8px;
+  padding:6px 9px;
+  border-radius:999px;
   font-size:11px;
-  font-weight:bold;
+  font-weight:900;
 }
 
-.wait{background:#e3f2fd;color:#1976d2;}
-.done{background:#e8f5e9;color:#2e7d32;}
-.ok{background:#fff3e0;color:#ef6c00;}
-
+.wait{background:#eef6ff;color:#1b64da;}
+.done{background:#e8f8ef;color:#1b7f45;}
+.ok{background:#fff5e6;color:#d46b08;}
 
 .footer{
-  background:#333;
-  color:#ccc;
-  text-align:center;
-  padding:30px 15px 80px;
-  font-size:12px;
-  line-height:1.6;
+  background:#191f28;
+  color:#b0b8c1;
+  text-align:left;
+  padding:30px 20px 95px;
+  font-size:11px;
+  line-height:1.7;
 }
 
-.footer-top{
-  margin-bottom:25px;
+.footer strong{
+  color:#fff;
 }
 
-.footer-warning{
-  margin-bottom:25px;
-}
-
+.footer-warning,
 .footer-info{
-  margin-bottom:25px;
+  margin-bottom:22px;
+}
+
+.footer-copy{
+  text-align:center;
+  color:#8b95a1;
+  margin-top:18px;
+}
+
+.footer a{
+  color:#d1d6db;
+  text-decoration:none;
+}
+
+.bottom-cta{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  max-width:480px;
+  margin:auto;
+  padding:12px 15px 14px;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(14px);
+  border-top:1px solid rgba(0,0,0,0.05);
+  z-index:9998;
+}
+
+.bottom-cta button{
+  width:100%;
+  height:52px;
+  border:none;
+  border-radius:16px;
+  background:#191f28;
+  color:#fff;
+  font-size:16px;
+  font-weight:900;
+}
+
+@media(max-width:360px){
+  .hero h1{font-size:27px;}
+  .slide h2{font-size:20px;}
 }
 </style>
 </head>
@@ -280,128 +562,229 @@ body{
   <div class="top-text">
     상호 : 드림인터내셔널대부중개 | 대표 : 한공주 | 대부업 등록번호 : 2007-경기부천-대부중개65호
   </div>
-  <div class="top-icons">
-    
-  </div>
 </div>
 
 <div class="wrap">
 
-<img src="https://choemiseon696-lan.github.io/loan-site/top-banner.png" class="top-banner">
-<img src="https://choemiseon696-lan.github.io/loan-site/mid-banner.png" class="mid-banner">
+  <section class="hero">
+    <div class="hero-badge">● 비대면 금융상품 상담</div>
+    <h1>복잡한 조건도<br>간편하게 상담받아보세요</h1>
+    <p>
+      필요한 금액과 현재 상황을 입력하면<br>
+      조건에 맞는 상품 안내 상담이 진행됩니다.
+    </p>
 
-<div class="loan-slider">
-  <div class="slides" id="slides">
-<div class="slide">
-  <div class="sub">금융상품 비교 서비스</div>
-  <h2>여러 금융사의 상품을 한눈에 비교하세요</h2>
-</div>
-<div class="slide">
-  <div class="sub">조건별 상품 안내</div>
-  <h2>정보 입력 후 상담이 진행됩니다</h2>
-</div>
-<div class="slide">
-  <div class="sub">비대면 상담 가능</div>
-  <h2>편한 시간에 상담을 받아보세요</h2>
-</div>
+    <div class="hero-card">
+      <div class="hero-row">
+        <div class="hero-left">
+          <div class="hero-icon">💬</div>
+          <div>
+            <div class="hero-label">상담 방식</div>
+            <div class="hero-value">비대면 상담</div>
+          </div>
+        </div>
+        <div class="hero-status">가능</div>
+      </div>
+
+      <div class="hero-row">
+        <div class="hero-left">
+          <div class="hero-icon">📄</div>
+          <div>
+            <div class="hero-label">진행 방식</div>
+            <div class="hero-value">정보 입력 후 안내</div>
+          </div>
+        </div>
+        <div class="hero-status">간편</div>
+      </div>
+
+      <div class="hero-row">
+        <div class="hero-left">
+          <div class="hero-icon">🔒</div>
+          <div>
+            <div class="hero-label">조회 여부</div>
+            <div class="hero-value">신용조회 없음</div>
+          </div>
+        </div>
+        <div class="hero-status">안내용</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quick-box">
+    <div class="quick-item">
+      <div class="quick-icon">⚡</div>
+      <div class="quick-title">간편 접수</div>
+      <div class="quick-sub">모바일에서 빠르게 상담 신청</div>
+    </div>
+
+    <div class="quick-item">
+      <div class="quick-icon">📊</div>
+      <div class="quick-title">조건 안내</div>
+      <div class="quick-sub">입력 정보 기준 상품 안내</div>
+    </div>
+
+    <div class="quick-item">
+      <div class="quick-icon">☎️</div>
+      <div class="quick-title">상담 연결</div>
+      <div class="quick-sub">연락 가능 시간에 맞춰 안내</div>
+    </div>
+
+    <div class="quick-item">
+      <div class="quick-icon">✅</div>
+      <div class="quick-title">선택 진행</div>
+      <div class="quick-sub">상담 후 진행 여부 결정</div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="section-title">상담 진행 절차</div>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <div class="step-title">정보 입력</div>
+        <div class="step-sub">성함, 연락처, 필요금액 등 기본 정보를 입력합니다.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <div class="step-title">상담사 확인</div>
+        <div class="step-sub">입력하신 내용을 바탕으로 상담 안내가 진행됩니다.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <div class="step-title">상품 조건 안내</div>
+        <div class="step-sub">고객 조건에 따라 가능한 상품을 비교 안내합니다.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div>
+        <div class="step-title">진행 여부 선택</div>
+        <div class="step-sub">상담 내용을 확인한 뒤 진행 여부를 결정합니다.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="loan-slider">
+    <div class="slides" id="slides">
+      <div class="slide">
+        <div class="sub">금융상품 비교 서비스</div>
+        <h2>여러 조건을 확인하고<br>맞춤 상담을 받아보세요</h2>
+      </div>
+      <div class="slide">
+        <div class="sub">조건별 상품 안내</div>
+        <h2>입력 정보 기준으로<br>상담 안내가 진행됩니다</h2>
+      </div>
+      <div class="slide">
+        <div class="sub">비대면 상담 가능</div>
+        <h2>방문 없이 모바일로<br>간편하게 접수하세요</h2>
+      </div>
+    </div>
+
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
   </div>
 
-  <div class="dots">
-    <span class="dot active"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-</div> <!-- 슬라이드 -->
+  <div class="form-box" id="formArea">
+    <div class="form-head">
+      <h3>간편 상담 신청</h3>
+      <p class="form-desc">
+        본 서비스는 금융상품을 직접 제공하지 않으며,<br>
+        고객 정보에 따라 제휴 금융사의 상품을 안내하는 중개 서비스입니다.
+      </p>
+    </div>
 
-<img src="https://choemiseon696-lan.github.io/loan-site/new-banner.png" class="mid-banner">
+    <select class="input" id="gender">
+      <option value="">성별 선택</option>
+      <option value="남">남</option>
+      <option value="여">여</option>
+    </select>
 
-<div class="form-box">
-  <h3>간편 상담 신청</h3>
+    <input class="input" id="name" placeholder="이름">
+    <input class="input" id="birth" placeholder="생년월일 (예: 900101)">
+    <input class="input" id="phone" placeholder="전화번호">
 
-  <p style="font-size:12px; color:#666; margin-bottom:10px;">
-  본 서비스는 금융상품을 직접 제공하지 않으며,
-  고객 정보에 따라 제휴 금융사의 상품을 안내하는 중개 서비스입니다.
-  </p>
+    <select class="input" id="time">
+      <option value="">연락 가능 시간</option>
+      <option>09:00 ~ 10:00</option>
+      <option>10:00 ~ 11:00</option>
+      <option>11:00 ~ 12:00</option>
+      <option>12:00 ~ 13:00</option>
+      <option>13:00 ~ 14:00</option>
+      <option>14:00 ~ 15:00</option>
+      <option>15:00 ~ 16:00</option>
+      <option>16:00 ~ 17:00</option>
+      <option>17:00 ~ 18:00</option>
+    </select>
 
-  <!-- 성별 -->
-  <select class="input" id="gender">
-    <option value="">성별 선택</option>
-    <option value="남">남</option>
-    <option value="여">여</option>
-  </select>
+    <select class="input" id="loanDelay">
+      <option value="">금융권 연체 여부</option>
+      <option value="유">유</option>
+      <option value="무">무</option>
+    </select>
 
-  <input class="input" id="name" placeholder="이름">
-  <input class="input" id="birth" placeholder="생년월일 (예: 900101)">
-  <input class="input" id="phone" placeholder="전화번호">
+    <select class="input" id="telDelay">
+      <option value="">통신 연체 여부</option>
+      <option value="유">유</option>
+      <option value="무">무</option>
+    </select>
 
-  <!-- 연락 가능 시간 -->
-  <select class="input" id="time">
-    <option value="">연락 가능 시간</option>
-    <option>09:00 ~ 10:00</option>
-    <option>10:00 ~ 11:00</option>
-    <option>11:00 ~ 12:00</option>
-    <option>12:00 ~ 13:00</option>
-    <option>13:00 ~ 14:00</option>
-    <option>14:00 ~ 15:00</option>
-    <option>15:00 ~ 16:00</option>
-    <option>16:00 ~ 17:00</option>
-    <option>17:00 ~ 18:00</option>
-  </select>
+    <select class="input" id="amount">
+      <option>필요금액 선택</option>
+      <option>500만원 이하</option>
+      <option>500 ~ 1000만원</option>
+      <option>1000 ~ 3000만원</option>
+      <option>3000만원 이상</option>
+    </select>
 
-  <!-- 금융 연체 -->
-  <select class="input" id="loanDelay">
-    <option value="">금융권 연체 여부</option>
-    <option value="유">유</option>
-    <option value="무">무</option>
-  </select>
+    <div class="agree-box">
+      <div class="agree-line">
+        <input type="checkbox" id="agree" checked required>
+        <label for="agree">개인정보 수집 및 이용에 동의합니다.</label>
+      </div>
+      <p class="notice">
+        ※ 입력 정보는 상품 안내를 위한 참고용이며, 신용조회는 진행되지 않습니다.
+      </p>
+    </div>
 
-  <!-- 통신 연체 -->
-  <select class="input" id="telDelay">
-    <option value="">통신 연체 여부</option>
-    <option value="유">유</option>
-    <option value="무">무</option>
-  </select>
-
-  <select class="input" id="amount">
-    <option>필요금액 선택</option>
-    <option>500만원 이하</option>
-    <option>500 ~ 1000만원</option>
-    <option>1000 ~ 3000만원</option>
-    <option>3000만원 이상</option>
-  </select>
-
- 
-  <div style="margin-top:12px; text-align:left; font-size:14px; display:flex; align-items:center; gap:6px;">
-    <input type="checkbox" id="agree" checked required style="width:16px; height:16px;">
-    <label for="agree">개인정보 수집 및 이용에 동의합니다.</label>
+    <button class="submit-btn" id="submitBtn" onclick="sendTelegram()">상품 조건 확인하기</button>
   </div>
 
-  
-  <p style="font-size:11px; color:#aaa; margin-top:4px;">
-  ※ 입력 정보는 상품 안내를 위한 참고용이며, 신용조회는 진행되지 않습니다.
-  </p>
+  <section class="trust">
+    <div class="section-title">안심하고 상담받으세요</div>
+    <div class="trust-list">
+      <div class="trust-item"><span class="check">✓</span> 대출 실행 및 승인 보장 표현을 사용하지 않습니다.</div>
+      <div class="trust-item"><span class="check">✓</span> 중개수수료를 요구하거나 받지 않습니다.</div>
+      <div class="trust-item"><span class="check">✓</span> 입력 정보 기준으로 상담 안내가 진행됩니다.</div>
+      <div class="trust-item"><span class="check">✓</span> 상담 후 진행 여부를 직접 선택할 수 있습니다.</div>
+    </div>
+  </section>
 
-  
-  <button class="submit-btn" id="submitBtn" onclick="sendTelegram()">상품 조건 확인하기</button>
-
-  
-</div>
-<div class="live">
-  <div class="live-title">최근 상담 접수 현황</div>
-  <div id="list"></div>
-</div>
+  <div class="live">
+    <div class="live-title">최근 상담 접수 현황</div>
+    <div class="live-sub">개인정보 보호를 위해 일부 정보는 마스킹 처리됩니다.</div>
+    <div id="list"></div>
+  </div>
 
 </div>
 
 <div class="footer">
-  <div class="footer-top">
-
-  </div>
   <div class="footer-warning">
+    <strong>금융상품 안내 고지</strong><br><br>
     본 서비스는 금융상품을 직접 제공하지 않으며,<br>
     고객의 조건에 따라 제휴 금융사의 상품을 안내하는 중개 서비스입니다.<br>
-    ※ 본 서비스는 대출 실행 및 승인 여부를 보장하지 않습니다.<br>
-    
+    ※ 본 서비스는 대출 실행 및 승인 여부를 보장하지 않습니다.<br><br>
+
     대출금리 : 연20%이내 / 연체이자율 : 약정금리+3% (단, 법정 최고금리 20% 이내)<br>
     취급수수료 등 기타부대비용 없음 / 조기상환조건없음 / 중개수수료 요구하거나 받는 것은 불법입니다.<br>
     대출시 귀하의 신용등급이 하락할 수 있습니다.<br>
@@ -414,17 +797,21 @@ body{
     (단, 대출상품 및 상환방법 등 대출계약 내용에 따라 달라질 수 있습니다.)
   </div>
 
-<div class="footer-copy">
-  Copyright © 드림인터내셔널대부중개 All Rights Reserved.
+  <div style="text-align:center; margin-top:15px;">
+    <a href="privacy.html" target="_blank">개인정보처리방침</a>
+    <span style="margin:0 8px;">|</span>
+    <a href="terms.html" target="_blank">이용약관</a>
+  </div>
+
+  <div class="footer-copy">
+    Copyright © 드림인터내셔널대부중개 All Rights Reserved.
+  </div>
 </div>
 
-
-<div style="margin-top:15px;">
-  <a href="privacy.html" target="_blank" style="color:#ccc;">개인정보처리방침</a>
-  <span style="margin:0 8px;">|</span>
-  <a href="terms.html" target="_blank" style="color:#ccc;">이용약관</a>
-</div>
-
+<div class="bottom-cta">
+  <button onclick="document.getElementById('formArea').scrollIntoView({behavior:'smooth'});">
+    상담 신청 바로가기
+  </button>
 </div>
 
 <script>
@@ -439,7 +826,6 @@ setInterval(()=>{
   dots.forEach(d=>d.classList.remove("active"));
   dots[current].classList.add("active");
 },3000);
-
 
 const names=[
 "김**","이**","박**","최**","정**","강**","조**","윤**","장**","임**",
@@ -533,6 +919,7 @@ if(currentCount >= 2){
   alert("이미 2회 접수된 번호입니다. 상담 연락을 기다려주세요.");
   return;
 }
+
 /* 버튼 연속 클릭 방지 */
 if(isSubmitting){
   alert("이미 접수 처리 중입니다. 잠시만 기다려주세요.");
@@ -543,7 +930,6 @@ isSubmitting = true;
 const submitBtn = document.getElementById("submitBtn");
 submitBtn.disabled = true;
 submitBtn.innerText = "접수 중...";
-
 
 const SECRET = "dream_2026_lock";
 
